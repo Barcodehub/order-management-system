@@ -15,7 +15,7 @@ export const createApp = () => {
 
   // Middlewares
   app.use(cors({
-    origin: 'http://localhost:5173' // o el puerto de tu frontend
+    origin: process.env.FRONTEND // o el puerto de tu frontend
   }));
   app.use(express.json());
   app.use(morgan('dev'));
