@@ -5,12 +5,18 @@ import 'express-async-errors';
 import { errorHandler } from './middlewares/error.middleware';
 import router from './routes';
 import { logger } from './utils/logger';
+import dotenv from "dotenv";
+
+// Cargar variables de entorno
+dotenv.config();
 
 export const createApp = () => {
   const app = express();
 
   // Middlewares
-  app.use(cors());
+  app.use(cors({
+    origin: 'http://localhost:5173' // o el puerto de tu frontend
+  }));
   app.use(express.json());
   app.use(morgan('dev'));
 

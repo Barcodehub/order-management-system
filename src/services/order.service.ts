@@ -71,7 +71,7 @@ export class OrderService {
   }
 
   static async getOrderById(orderId: string, userId: string, isAdmin: boolean): Promise<IOrder | null> {
-    const order = await Order.findById(orderId).populate('items.product', 'name price description');
+    const order = await Order.findById(orderId).populate('items.product', 'name price description').populate('user', 'name email');;
 
     if (!order) {
       return null;
