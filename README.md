@@ -22,23 +22,28 @@ API desarrollada con Node.js, TypeScript y Express para gestionar un sistema de 
 
 ## INSTALACIÓN:
 
-1. Clonar el repositorio:
+1. Clonar el repositorio
 
 2. Instalar dependencias:
-npm install
+- `npm install`
 
 3. Configurar variables de entorno:
 Crear un archivo .env en la raíz con las siguientes variables:
-MONGO_URI=mongodb://localhost:27017/order-management
-JWT_SECRET=tu_clave_secreta_jwt
-PORT=3000
+- `MONGO_URI=mongodb://localhost:27017/order-management`
+- `JWT_SECRET=tu_clave_secreta_jwt`
+- `PORT=3000`
 
 4. Ejecutar en desarrollo:
-npm run dev
+- `npm run dev`
 
 5. Compilar para producción:
-npm run build
-npm start
+- `npm run build`
+- `npm start`
+
+6. O Si prefieres correrlo en Docker:
+- Asegurarse de tener instalado Docker y docker-compose.
+- `docker-compose up --build`
+
 
 ## Estructura del Proyecto
 
